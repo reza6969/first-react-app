@@ -8,7 +8,9 @@ class Counter extends Component {
     //     }
     // };
     state = {
-        count: 0,
+        // count: 0,
+        // value: 0,
+        value: this.props.counter.value,
         // imageUrl: 'https://picsum.photos/200'
         tags: ['tag1', 'tag2', 'tag3']
     };
@@ -37,7 +39,7 @@ class Counter extends Component {
         // console.log('Increment Clicked!', this.state.count);
         // this.state.count++;
         console.log(product);
-        this.setState({ count: this.state.count + 1});
+        this.setState({ value: this.state.value + 1});
     }
 
     // doHandleIncrement = () => {
@@ -50,6 +52,7 @@ class Counter extends Component {
         // return <><h1>Hello World!!</h1><button>Increment</button></>;
         // React.createElement("div");
         // return <div><h1>Hello World!!</h1><button>Increment</button><div>;
+        console.log('props', this.props);
         return (
             // <div>
             //     <h1>Hello World!!</h1>
@@ -61,10 +64,13 @@ class Counter extends Component {
                 {/* <span>{this.state.count}</span> */}
                 {/* <span style={ this.styles } className='badge bg-primary m-2'>{this.formatCount()}</span> */}
                 {/* <span style={ this.styles } className={classes}>{this.formatCount()}</span> */}
+                {this.props.children}
                 <span style={ this.styles } className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 {/* <button onClick={this.handleIncrement} className='btn btn-secondary btn-sm'>Increment</button> */}
                 {/* <button onClick={this.doHandleIncrement} className='btn btn-secondary btn-sm'>Increment</button> */}
                 <button onClick={ () => this.handleIncrement({ id: 1})} className='btn btn-secondary btn-sm'>Increment</button>
+                {/* <button onClick={this.handleDelete} className="btn btn-danger btn-sm m-2">Delete</button> */}
+                <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
                 {/* <ul>{ this.state.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul> */}
                 { this.state.tags.length === 0 && "Please create a new tag!"}
                 { this.renderTags() }
@@ -74,16 +80,16 @@ class Counter extends Component {
 
     getBadgeClasses() {
         let classes = 'badge m-2 bg-';
-        classes += (this.state.count === 0) ? 'warning' : 'primary';
+        classes += (this.state.value === 0) ? 'warning' : 'primary';
         return classes;
     }
 
     formatCount() {
-        const { count } = this.state;
+        const { value } = this.state;
         const x = <h1>Zero</h1>
         // return count === 0 ? "Zero" : count;
         // return count === 0 ? <h1>Zero</h1> : count;
-        return count === 0 ? x : count;
+        return value === 0 ? x : value;
     }
 }
  

@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import Counter from './components/counter';
 import Movies from './components/movies';
 import 'font-awesome/css/font-awesome.css';
+import Counters from './components/counters';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <App />
     {/* <Counter /> */}
     <Movies />
+    <Counters />
   </React.StrictMode>
 );
 
