@@ -15,30 +15,43 @@ class App extends Component {
     ]
   };
 
-handleIncrement = counter => {
-  // console.log(counter);
-  const counters = [...this.state.counters];
-  const index = counters.indexOf(counter);
-  counters[index] = { ...counter};
-  counters[index].value++;
-  // console.log(this.state.counters[0]);
-  this.setState({ counters });
-};
+  constructor(props) {
+    super(props);
+    console.log('App-Constructor', this.props);
+    // this.state = this.props.something;
+  }
 
-handleReset = () => {
-  const counters = this.state.counters.map(c => {
-    c.value = 0;
-    return c;
-  });
-  this.setState({ counters });
-};
+  componentDidMount() {
+    // Ajax Call
+    // this.setState({ movies });
+    console.log('App-Mounted');
+  }
 
-handleDelete = (counterId) => {
-  // console.log('Event Handle Called', counterId);
-  const counters = this.state.counters.filter(c => c.id !== counterId);
-  this.setState({ counters });
-};
-  render() { 
+  handleIncrement = counter => {
+    // console.log(counter);
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter};
+    counters[index].value++;
+    // console.log(this.state.counters[0]);
+    this.setState({ counters });
+  };
+
+  handleReset = () => {
+    const counters = this.state.counters.map(c => {
+      c.value = 0;
+      return c;
+    });
+    this.setState({ counters });
+  };
+
+  handleDelete = (counterId) => {
+    // console.log('Event Handle Called', counterId);
+    const counters = this.state.counters.filter(c => c.id !== counterId);
+    this.setState({ counters });
+  };
+  render() {
+    console.log('App-Rendered');
     return (
       <React.Fragment>
         <NavBar 

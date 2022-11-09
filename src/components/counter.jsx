@@ -48,6 +48,7 @@ class Counter extends Component {
 
 
     render() {
+        console.log('Counter - Rendered');
         // let classes = this.getBadgeClasses();
         // return <><h1>Hello World!!</h1><button>Increment</button></>;
         // React.createElement("div");
