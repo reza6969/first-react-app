@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import NavBar from './components/navbar';
 import React, { Component } from 'react';
-import Counters from './components/counters';
+// import Counters from './components/counters';
 import './App.css';
 // import React from 'react';
 
@@ -67,7 +67,7 @@ class App extends Component {
         <NavBar 
           totalCounters={this.state.counters.filter(c => c.value > 0).length} 
         />
-        <main className='container'>
+        {/* <main className='container'>
           <Counters 
             counters={this.state.counters}
             onReset={this.handleReset} 
@@ -75,7 +75,7 @@ class App extends Component {
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}  
           />
-        </main>
+        </main> */}
       </React.Fragment>
     );
   }
