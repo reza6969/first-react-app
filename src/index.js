@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 // import Navbar from './Navigation/Navbar';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 // import Counter from './components/counter';
-import Movies from './components/movies';
+// import Movies from './components/movies';
 import 'font-awesome/css/font-awesome.css';
 // import Counters from './components/counters';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
     {/* <Navbar/> */}
     <App />
     {/* <Counter /> */}
-    <Movies />
+    {/* <Movies /> */}
     {/* <Counters /> */}
-  </React.StrictMode>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
 
 // const element = <h1>Hello World!!</h1>;

@@ -1,9 +1,15 @@
 // import logo from './logo.svg';
-import NavBar from './components/navbar';
 import React, { Component } from 'react';
+import { Route, Redirect, Switch } from 'react-router-dom';
 // import Counters from './components/counters';
-import './App.css';
 // import React from 'react';
+import Movies from './components/movies';
+import MovieForm from './components/movieForm';
+import Customers from './components/customers';
+import Rentals from './components/rentals';
+import NotFound from './components/notFound';
+import NavBar from './components/navbar';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -76,6 +82,17 @@ class App extends Component {
             onDelete={this.handleDelete}  
           />
         </main> */}
+        <div className='content'>
+          <Switch>
+            <Route path="/movies/:id" component={MovieForm} />
+            <Route path="/movies" component={Movies} />
+            <Route path="/customers" component={Customers} />
+            <Route path="/rentals" component={Rentals} />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect from="/" exact to="/movies" />
+            <Redirect to="/not-found" />
+          </Switch>
+        </div>
       </React.Fragment>
     );
   }
