@@ -69,5 +69,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### `npm i bootstrap@4.1.1`
+### `npm install bootstrap`
+### `npm install eslint --save-dev`
+### `npm install eslint --save-dev`
+### `npm i font-awesome`
+### `npm i lodash@4.17.10`
 ### `npm i react-router-dom@4.3.1`
 ### `npm i query-string@6.1.0`
