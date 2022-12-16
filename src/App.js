@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 // import Counters from './components/counters';
 // import React from 'react';
 import Movies from './components/movies';
@@ -11,6 +12,7 @@ import NotFound from './components/notFound';
 import NavBar from './components/navbar';
 import LoginForm from './components/loginForm';
 import RegisterForm from './components/registerForm';
+import "react-toastify/dist/ReactToastify.css";
 import './App.css';
 
 class App extends Component {
@@ -72,6 +74,7 @@ class App extends Component {
     console.log('App-Rendered');
     return (
       <React.Fragment>
+        <ToastContainer />
         <NavBar 
           totalCounters={this.state.counters.filter(c => c.value > 0).length} 
         />
