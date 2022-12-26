@@ -77,3 +77,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm i lodash@4.17.10`
 ### `npm i react-router-dom@4.3.1`
 ### `npm i query-string@6.1.0`
+### npm i joi-browser@13.4
+### npm i axios@0.18
+### npm i react-toastify@4.1
+### npm install --save @sentry/react @sentry/tracing
+### npm i raven-js@3.26.4
+### npm i joi
+### npm i axios@0.18.0 react-toastify@4.1.0
+### 
+
