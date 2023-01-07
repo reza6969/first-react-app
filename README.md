@@ -84,4 +84,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm i raven-js@3.26.4`
 ### `npm i joi`
 ### `npm i axios@0.18.0 react-toastify@4.1.0`
+### `npm i jwt-decode@2.2.0`
 
