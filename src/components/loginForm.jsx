@@ -2,6 +2,8 @@ import React from 'react';
 import Joi from 'joi-browser';
 import Form from './common/form';
 // import Input from './common/input';
+// import { login } from "../services/authService";
+import auth from "../services/authService";
 
 class LoginForm extends Form {
     username = React.createRef();
@@ -71,9 +73,28 @@ class LoginForm extends Form {
     //     this.doSubmit();
     // };
 
-    doSubmit = () => {
+    // login(username, password) {
+    //     console.log(username, password);
+    //     return 1;
+    // }
+
+    doSubmit = async () => {
         // Call the server
         console.log('submitted');
+        try{
+            const { data } = this.state;
+            // const { data: jwt } = await login(data.username, data.password);
+            // localStorage.setItem("token", jwt);
+            await auth.login(data.username, data.password);
+            // this.props.history.push("/");
+            window.location = '/';
+        } catch(ex){
+            if(ex.response && ex.response.status === 400) {
+                const errors = { ...this.state.errors };
+                errors.username = ex.response.data;
+                this.setState({ errors });
+            }
+        }
     }
     // state = {  }
     // validateProperty = ({ name, value}) => {
