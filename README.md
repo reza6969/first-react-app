@@ -86,3 +86,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm i axios@0.18.0 react-toastify@4.1.0`
 ### `npm i jwt-decode@2.2.0`
 
+creating an optimized production build... 
+### `npm run build`
+
+
+this is a simple lightweight web server
+### `npm install -g serve`
+
+this command, serve the content of the build folder
+### `serve -s build`
+
+Heroku, which is an amazing cloud service
+need to install Heroku CLI 
+once you install Heroku CLI and open up the terminal run
+### `heroku -v `
+
+you need to login
+### `heroku login`
+on Mac we use export, on windows we set HTTP_PROXY and 
+### `export HTTP_PROXY=http://proxy.server.com:1234`
+### `set HTTP_PROXY=http://proxy.server.com:1234`
+MongoDB in the Cloud
+you have set up a Heroku account, now you need to setup an mLap account 
+
+Deploying to Heroku
+first-api-node
+### `heroku create vidly-api-01`
+### `heroku create`
+### `git push heroku master`
+### `heroku open`
+
+viewing Logs
+### `heroku logs`
+
+### `npm run build`
+### `serve -s build`
